@@ -34,7 +34,7 @@ public function detailBuku()
 	$id = $this->uri->segment(3); 
 	$buku = $this->ModelBuku->joinKategoriBuku(['buku.id' => $id])->result(); 
 	$data['user'] = "Pengunjung";
-	 $data['title'] = "Detail Buku";
+	$data['title'] = "Detail Buku";
 
 	 foreach ($buku as $fields) {
 	  $data['judul'] = $fields->judul_buku; 
@@ -55,3 +55,4 @@ public function detailBuku()
 	   $this->load->view('templates/templates-user/footer');
 	    }
 	}
+	
